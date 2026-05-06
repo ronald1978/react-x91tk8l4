@@ -293,7 +293,7 @@ Geef een tijdlijn terug als JSON array (geen markdown, alleen pure JSON):
 Zorg voor 4-6 fases. Gebruik échte nummers passend bij de muziekthema's en leeftijdsgroepen. Nederlandstalig antwoord. Alleen JSON.`;
 
     try {
-      const res = await fetch("https://api.anthropic.com/v1/messages", {
+      const res = await fetch("/api/claude", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ model: "claude-sonnet-4-20250514", max_tokens: 1000, messages: [{ role: "user", content: prompt }] })
